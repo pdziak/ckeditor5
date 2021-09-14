@@ -19,7 +19,6 @@ import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar';
 import Indent from '@ckeditor/ckeditor5-indent/src/indent';
 import Link from '@ckeditor/ckeditor5-link/src/link';
 import List from '@ckeditor/ckeditor5-list/src/list';
-import MediaEmbed from '@ckeditor/ckeditor5-media-embed/src/mediaembed';
 import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice';
 import Table from '@ckeditor/ckeditor5-table/src/table';
@@ -28,6 +27,8 @@ import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformatio
 import HorizontalLine from '@ckeditor/ckeditor5-horizontal-line/src/horizontalline';
 import SourceEditing from '@ckeditor/ckeditor5-source-editing/src/sourceediting';
 import ImageInsert from '@ckeditor/ckeditor5-image/src/imageinsert';
+import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline';
+import Strikethrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -46,7 +47,6 @@ ClassicEditor.builtinPlugins = [
 	Indent,
 	Link,
 	List,
-	MediaEmbed,
 	Paragraph,
 	PasteFromOffice,
 	Table,
@@ -54,7 +54,9 @@ ClassicEditor.builtinPlugins = [
 	TextTransformation,
 	HorizontalLine,
 	SourceEditing,
-	ImageInsert
+	ImageInsert,
+	Underline,
+	Strikethrough
 ];
 
 // Editor configuration.
@@ -65,7 +67,10 @@ ClassicEditor.defaultConfig = {
 			'|',
 			'bold',
 			'italic',
+			'underline',
+			'strike',
 			'link',
+			'|',
 			'bulletedList',
 			'numberedList',
 			'|',
@@ -74,12 +79,10 @@ ClassicEditor.defaultConfig = {
 			'|',
 			'blockQuote',
 			'insertTable',
-			'mediaEmbed',
 			'undo',
 			'redo',
 			'horizontalLine',
 			'sourceEditing',
-			'mediaEmbed',
 			'insertImage'
 		]
 	},
