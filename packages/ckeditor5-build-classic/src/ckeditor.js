@@ -11,13 +11,11 @@ import Autoformat from '@ckeditor/ckeditor5-autoformat/src/autoformat';
 import Bold from '@ckeditor/ckeditor5-basic-styles/src/bold';
 import Italic from '@ckeditor/ckeditor5-basic-styles/src/italic';
 import BlockQuote from '@ckeditor/ckeditor5-block-quote/src/blockquote';
-import EasyImage from '@ckeditor/ckeditor5-easy-image/src/easyimage';
 import Heading from '@ckeditor/ckeditor5-heading/src/heading';
 import Image from '@ckeditor/ckeditor5-image/src/image';
 import ImageCaption from '@ckeditor/ckeditor5-image/src/imagecaption';
 import ImageStyle from '@ckeditor/ckeditor5-image/src/imagestyle';
 import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar';
-import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload';
 import Indent from '@ckeditor/ckeditor5-indent/src/indent';
 import Link from '@ckeditor/ckeditor5-link/src/link';
 import List from '@ckeditor/ckeditor5-list/src/list';
@@ -29,6 +27,7 @@ import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
 import HorizontalLine from '@ckeditor/ckeditor5-horizontal-line/src/horizontalline';
 import SourceEditing from '@ckeditor/ckeditor5-source-editing/src/sourceediting';
+import ImageInsert from '@ckeditor/ckeditor5-image/src/imageinsert';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -39,13 +38,11 @@ ClassicEditor.builtinPlugins = [
 	Bold,
 	Italic,
 	BlockQuote,
-	EasyImage,
 	Heading,
 	Image,
 	ImageCaption,
 	ImageStyle,
 	ImageToolbar,
-	ImageUpload,
 	Indent,
 	Link,
 	List,
@@ -56,7 +53,8 @@ ClassicEditor.builtinPlugins = [
 	TableToolbar,
 	TextTransformation,
 	HorizontalLine,
-	SourceEditing
+	SourceEditing,
+	ImageInsert
 ];
 
 // Editor configuration.
@@ -74,7 +72,6 @@ ClassicEditor.defaultConfig = {
 			'outdent',
 			'indent',
 			'|',
-			'uploadImage',
 			'blockQuote',
 			'insertTable',
 			'mediaEmbed',
@@ -82,7 +79,8 @@ ClassicEditor.defaultConfig = {
 			'redo',
 			'horizontalLine',
 			'sourceEditing',
-			'mediaEmbed'
+			'mediaEmbed',
+			'insertImage'
 		]
 	},
 	image: {
